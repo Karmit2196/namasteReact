@@ -1,0 +1,33 @@
+ npm does not stand of node package manager.
+
+- Package.json is configuration of node modules.
+
+- Create react app uses web pack and bundler behind the scenes.
+
+
+
+
+
+
+
+There are two types of dependencies dev and normal .  Dev dependencies are the dependencies which we use only for dev purposes, let’s say there is some dependency with name parcel, and we want to use it as dev dependency then we have give this command - nom install -D parcel (giving D as a parameter it will make parcel as dev dependency)
+
+
+- Difference between ‘~’ and ‘^  (‘^’ will install minor version lets’e say you have 2.8.7 version of react installed in your project and tomorrow if react releases version 2.8.8 then this version will automatically get installed in your project if you have put “^” sign, but if it is higher version then you have to put ‘~’ sign)
+
+- package.lock.json has all the latest versions of your dependency.
+
+- Transitive dependency : Let’s say you have install parcel in your project as decency, but parcel may have some other dependencies and those decencies may have other dependencies , this is we can say as transitive dependency. that’s why node modules are too heavy in size.
+
+
+
+
+
+
+
+
+HMR : hot module replacement - as soon as we change something in our local, the changes gets reflected in our browser,  that is known as home module replacement and this happens with the help of parcel.
+
+
+Things Parcel can do:
+HMR, file watching also, caching, image optimization, magnification, bundling, compressing, 
