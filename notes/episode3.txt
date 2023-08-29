@@ -1,0 +1,47 @@
+Scripts in package.json (npm start, npm run, etc.):
+
+In the "package.json" file, you can define custom scripts that make your development workflow smoother. For instance, npm start typically initiates your development server, and npm run is used to execute custom scripts defined in the "scripts" section.
+React and JSX Relationship:
+
+While commonly believed that JSX is mandatory for React, this isn't entirely true. React is independent of JSX and can be written without it. JSX, created by Facebook, was introduced to enhance developer productivity by blending JavaScript and HTML-like syntax.
+Understanding JSX:
+
+JSX isn't HTML within JavaScript; rather, it's a syntax extension for JavaScript that resembles HTML. It provides a more declarative way to describe the structure of your React components.
+Creating Elements in React:
+
+There are two main ways to create React elements:
+Using React's API:
+jsx
+Copy code
+React.createElement("h1", { id: "heading" }, "Namaste React")
+Using JSX:
+jsx
+Copy code
+<h1 id="heading">Namaste React</h1>
+Both of these approaches result in the creation of a JavaScript object behind the scenes.
+JSX Transformation with Babel:
+
+JSX is transformed into its equivalent React code using tools like Babel (which is often integrated with tools like Parcel). This transformation converts JSX syntax into React.createElement function calls.
+JSX Transformation Process:
+
+JSX → React.createElement Calls → React Elements (JavaScript objects) → Rendering as HTML elements.
+Types of React Components: Functional and Class-Based:
+
+React components come in two flavors: functional and class-based.
+Functional Component: A normal JavaScript function that returns JSX code. They're simpler, often used for presentational purposes.
+jsx
+Copy code
+const Title = () => <div>Just for test</div>;
+Class-Based Component: A class that extends React.Component and uses lifecycle methods. They offer more advanced features and state management.
+Component Composition:
+
+Component composition refers to the practice of including one component within another. This creates a hierarchical structure, making UI development modular and maintainable.
+Calling Functional Components:
+
+There are multiple ways to use a functional component like "Title":
+jsx
+Copy code
+<Title />
+<Title></Title>
+{Title()}
+All these methods achieve the same result: rendering the JSX returned by the "Title" component.
