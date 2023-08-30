@@ -1,0 +1,16 @@
+Virtual DOM is nothing but an object representation of whole DOM.
+React updates the elements on the basis of diff alogrithm.
+
+The update happens by comparing two objects, not the dom.
+
+React is doing efficient DOM manupilation because it has a virtual dom.React can effifciently find out the
+difference between virtual doms and update the UI, and this happens with the help of diff algorithm.
+
+cons[res,setRes] = useState(data);
+
+can also be written as follow :
+
+const arr=useState(data);
+
+const res=arr[0];
+const setRes=arr[1];
