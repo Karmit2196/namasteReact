@@ -1,0 +1,1 @@
+Whenever state vaiable updates, react triggers a reconciliation cycle
