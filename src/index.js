@@ -6,7 +6,8 @@ import Error from "./components/Error";
 import About from "./components/About";
 import Body from "./components/Body";
 import Contact from "./components/Contact";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import RestrauntMenu from "./components/RestrauntMenu";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
@@ -29,6 +30,10 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path:"/restraunts/:resId",
+        element:<RestrauntMenu/>,
+      }
     ],
     errorElement: <Error />,
   },
