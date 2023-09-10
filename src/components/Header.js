@@ -1,40 +1,65 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
   return (
-    <div className="flex justify-between shadow-lg m-2 bg-pink-400">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://tse3.mm.bing.net/th?id=OIP.-Yyvp72aoLShDLLKl_-K0AAAAA&pid=Api&P=0&h=180 "
-          alt=""
-        />
+    <header className="bg-blue-500 py-4 mb-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="logo-container">
+          <img
+            className="logo h-12"
+            src="https://tse3.mm.bing.net/th?id=OIP.-Yyvp72aoLShDLLKl_-K0AAAAA&pid=Api&P=0&h=180"
+            alt=""
+          />
+        </div>
+        <nav>
+          <ul className="flex space-x-4">
+            <li>
+              <Link
+                to="/"
+                className="text-white hover:text-blue-200 transition duration-300"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="text-white hover:text-blue-200 transition duration-300"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="text-white hover:text-blue-200 transition duration-300"
+              >
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/cart"
+                className="text-white hover:text-blue-200 transition duration-300"
+              >
+                Cart
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <button
+          className="btn bg-white text-blue-500 hover:bg-blue-400 transition duration-300"
+          onClick={() => {
+            btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
+          }}
+        >
+          {btnName}
+        </button>
       </div>
-      <div className="flex items-center">
-        <ul className="flex p-4 m-4">
-          <li className="px-2">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="px-2">
-            <Link to="/about">About Us</Link>
-          </li>
-          <li className="px-2">
-            <Link to="/contact">Contact Us</Link>
-          </li>
-          <li className="px-2">Cart</li>
-          <button
-            className="btn"
-            onClick={() => {
-              btnName == "Login" ? setBtnName("Logout") : setBtnName("Login");
-            }}
-          >
-            {btnName}
-          </button>
-        </ul>
-      </div>
-    </div>
+    </header>
   );
 };
 
