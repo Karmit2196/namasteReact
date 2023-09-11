@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+
+  const cartItems = useSelector((store) => {
+    console.log(store)
+   return store.cart.items;
+  });
+  console.log(cartItems);
 
   return (
     <header className="bg-blue-500 py-4 mb-4">
@@ -45,7 +52,7 @@ const Header = () => {
                 to="/cart"
                 className="text-white hover:text-blue-200 transition duration-300"
               >
-                Cart
+                Cart - {`${cartItems.length} - items`}
               </Link>
             </li>
           </ul>

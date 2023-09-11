@@ -1,6 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const MenuItems = ({ itemCards }) => {
+
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+
+    dispatch(addItem(item))
+
+  }
   return (
     <div>
       {itemCards.map((item) => (
@@ -22,7 +32,7 @@ const MenuItems = ({ itemCards }) => {
                 src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/${item.card.info.imageId}`}
                 alt="res-logo"
               />
-              <button className="bg-yellow-500 text-white px-3 py-2 rounded-full hover:bg-yellow-600 focus:outline-none absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
+              <button className="bg-yellow-500 text-white px-3 py-2 rounded-full hover:bg-yellow-600 focus:outline-none absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2" onClick={()=>handleAddItem(item)}>
                 Add to Cart
               </button>
             </div>

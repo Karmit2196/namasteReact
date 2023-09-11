@@ -8,6 +8,7 @@ import Body from "./components/Body";
 import Contact from "./components/Contact";
 import RestrauntMenu from "./components/RestrauntMenu";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Cart from "./components/Cart";
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/restraunts/:resId",
         element:<RestrauntMenu/>,
+      },
+      {
+        path:"/cart",
+        element:<Cart/>,
       }
     ],
     errorElement: <Error />,
